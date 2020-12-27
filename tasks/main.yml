@@ -1,0 +1,11 @@
+---
+# tasks file for ansible-vagrant
+
+- name: Install vagrant and virtualbox
+  become: true
+  package:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - vagrant
+    - virtualbox
